@@ -13,8 +13,27 @@
         <chain base_link="ur5_arm_base_link" tip_link="ur5_arm_ee_link" />
     </group>
     <group name="gripper">
-        <joint name="r_gripper_joint"/>
+        <joint name="r_gripper_palm_joint" />
+        <joint name="r_gripper_l_finger_joint" />
+        <joint name="r_gripper_r_finger_joint" />
+        <joint name="r_gripper_joint" />
+        <joint name="r_gripper_tool_joint" />
     </group>
+       <group_state name="open-gripper" group="gripper">
+        <joint name="r_gripper_joint" value="0" />
+        <joint name="r_gripper_l_finger_joint" value="0.548" />
+        <joint name="r_gripper_r_finger_joint" value="0.548" />
+    </group_state>
+    <group_state name="almost-closed" group="gripper">
+        <joint name="r_gripper_joint" value="0" />
+        <joint name="r_gripper_l_finger_joint" value="0.1201" />
+        <joint name="r_gripper_r_finger_joint" value="0.1262" />
+    </group_state>
+    <group_state name="tightly-closed" group="gripper">
+        <joint name="r_gripper_joint" value="0" />
+        <joint name="r_gripper_l_finger_joint" value="0" />
+        <joint name="r_gripper_r_finger_joint" value="0" />
+    </group_state>
     <end_effector name="end_effector" parent_link="r_gripper_joint" group="gripper" /> 
     <!--VIRTUAL JOINT: Purpose: this element defines a virtual joint between a robot link and an external frame of reference (considered fixed with respect to the robot)-->
     <virtual_joint name="virtual_joint" type="fixed" parent_frame="base_link" child_link="base_footprint" />
@@ -47,7 +66,6 @@
 <disable_collisions link1="r_gripper_palm_link" link2="r_gripper_r_finger_link" reason="Adjacent" />
 <disable_collisions link1="r_gripper_r_finger_link" link2="r_gripper_r_finger_tip_link" reason="Adjacent" />
 <disable_collisions link1="top_plate_link" link2="ur5_arm_upper_arm_link" reason="Adjacent" />
-
     <disable_collisions link1="base_link" link2="front_left_wheel_link" reason="Adjacent" />
     <disable_collisions link1="base_link" link2="front_right_wheel_link" reason="Adjacent" />
     <disable_collisions link1="base_link" link2="rear_left_wheel_link" reason="Adjacent" />
