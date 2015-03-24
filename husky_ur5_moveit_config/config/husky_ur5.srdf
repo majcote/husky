@@ -32,6 +32,22 @@
 <disable_collisions link1="top_plate_link" link2="ur5_arm_shoulder_link" reason="Adjacent" />
 <disable_collisions link1="top_plate_link" link2="user_rail_link" reason="Adjacent" />
 
+<disable_collisions link1="base_laser" link2="base_link" reason="Adjacent" />
+<disable_collisions link1="base_laser" link2="front_bumper_link" reason="Adjacent" />
+<disable_collisions link1="base_laser" link2="top_chassis_link" reason="Adjacent" />
+<disable_collisions link1="base_laser" link2="top_plate_link" reason="Adjacent" />
+<disable_collisions link1="base_link" link2="front_bumper_link" reason="Adjacent" />
+<disable_collisions link1="base_link" link2="rear_bumper_link" reason="Adjacent" />
+<disable_collisions link1="base_link" link2="top_chassis_link" reason="Adjacent" />
+<disable_collisions link1="base_link" link2="top_plate_link" reason="Adjacent" />
+<disable_collisions link1="base_link" link2="user_rail_link" reason="Adjacent" />
+<disable_collisions link1="front_bumper_link" link2="top_plate_link" reason="Adjacent" />
+<disable_collisions link1="front_bumper_link" link2="ur5_arm_shoulder_link" reason="Never" />
+<disable_collisions link1="front_bumper_link" link2="ur5_arm_upper_arm_link" reason="Never" />
+<disable_collisions link1="r_gripper_palm_link" link2="r_gripper_r_finger_link" reason="Adjacent" />
+<disable_collisions link1="r_gripper_r_finger_link" link2="r_gripper_r_finger_tip_link" reason="Adjacent" />
+<disable_collisions link1="top_plate_link" link2="ur5_arm_upper_arm_link" reason="Adjacent" />
+
     <disable_collisions link1="base_link" link2="front_left_wheel_link" reason="Adjacent" />
     <disable_collisions link1="base_link" link2="front_right_wheel_link" reason="Adjacent" />
     <disable_collisions link1="base_link" link2="rear_left_wheel_link" reason="Adjacent" />
