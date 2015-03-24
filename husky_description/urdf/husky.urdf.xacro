@@ -152,7 +152,7 @@ ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSI
 			       a="${68.3698/1000.0}"
 			       b="${43.3849/1000.0}"
 			       r="${91.5/1000.0}" >
-		      <origin xyz="0 0 0" rpy="0 0 0" />
+		      <origin xyz="-0.03 0 0" rpy="0 0 0" />
 		      </xacro:pr2_gripper_v0>
 	    </xacro:if>
 
