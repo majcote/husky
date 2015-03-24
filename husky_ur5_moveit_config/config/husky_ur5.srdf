@@ -13,6 +13,7 @@
         <chain base_link="ur5_arm_base_link" tip_link="ur5_arm_ee_link" />
     </group>
     <group name="gripper">
+        <link name="r_gripper_palm_link" />
         <joint name="r_gripper_palm_joint" />
         <joint name="r_gripper_l_finger_joint" />
         <joint name="r_gripper_r_finger_joint" />
@@ -34,7 +35,7 @@
         <joint name="r_gripper_l_finger_joint" value="0" />
         <joint name="r_gripper_r_finger_joint" value="0" />
     </group_state>
-    <end_effector name="r_gripper_tool_joint" parent_link="r_gripper_joint" group="gripper" /> 
+    <end_effector name="r_gripper_palm_link" parent_link="ur5_arm_ee_link" group="gripper" /> 
     <!--VIRTUAL JOINT: Purpose: this element defines a virtual joint between a robot link and an external frame of reference (considered fixed with respect to the robot)-->
     <virtual_joint name="virtual_joint" type="fixed" parent_frame="base_link" child_link="base_footprint" />
     <!--DISABLE COLLISIONS: By default it is assumed that any link of the robot could potentially come into collision with any other link in the robot. This tag disables collision checking between a specified pair of links. -->
