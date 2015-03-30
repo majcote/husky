@@ -1,5 +1,8 @@
 <launch>
 
+ <!-- Launch file to view a Husky in the odom frame and control it using interactive markers -->
+ <node pkg="interactive_marker_twist_server" type="marker_server" name="twist_marker_server" output="screen"/>
+
  <include file="$(find husky_ur5_moveit_config)/launch/husky_ur5_planning_execution.launch">
      <arg name="sim" value="true"/>
  </include>
