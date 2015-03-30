@@ -13,7 +13,7 @@
   <arg unless="$(arg info)" name="command_args" value="" />
   <arg     if="$(arg info)" name="command_args" value="--debug" />
 
-  <!-- move_group settings -->
+  <!-- move_group settings -->	
   <arg name="allow_trajectory_execution" default="true"/>
   <arg name="fake_execution" default="false"/>
   <arg name="max_safe_path_cost" default="1"/>
@@ -31,6 +31,14 @@
     <arg name="moveit_controller_manager" value="husky_ur5" unless="$(arg fake_execution)"/>
     <arg name="moveit_controller_manager" value="fake" if="$(arg fake_execution)"/>
   </include>
+
+  <!-- PR2 MOVE GROUP FOR GRIPPER --> 
+ <!-- <include ns="move_group" file="$(find pr2_moveit_config)/launch/trajectory_execution.launch.xml" if="$(arg allow_trajectory_execution)">
+    <arg name="moveit_controller_manager" value="pr2" unless="$(arg fake_execution)"/>
+    <arg name="moveit_controller_manager" value="fake" if="$(arg fake_execution)"/>
+    <arg name="moveit_manage_controllers" value="true" />
+  </include> -->
+
 
   <!-- Sensors Functionality -->
   <include ns="move_group" file="$(find husky_ur5_moveit_config)/launch/sensor_manager.launch.xml" if="$(arg allow_trajectory_execution)">

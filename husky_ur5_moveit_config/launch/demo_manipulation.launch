@@ -1,0 +1,11 @@
+<launch>
+
+ <include file="$(find husky_ur5_moveit_config)/launch/husky_ur5_planning_execution.launch">
+     <arg name="sim" value="true"/>
+ </include>
+
+ <include file="$(find husky_ur5_moveit_config)/launch/moveit_rviz.launch">
+     <arg name="config" value="true"/>
+ </include>
+
+</launch>

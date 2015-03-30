@@ -4,7 +4,14 @@ controller_list:
     default: true
     type: FollowJointTrajectory
     joints: [ur5_arm_shoulder_pan_joint, ur5_arm_shoulder_lift_joint, ur5_arm_elbow_joint, ur5_arm_wrist_1_joint, ur5_arm_wrist_2_joint, ur5_arm_wrist_3_joint, ee_joint]
-  - name: gripper_controller
-    action_ns: follow_joint_trajectory
-    type: FollowJointTrajectory
-    joints: [r_gripper_joint, r gripper_l_finger_joint, r_gripper_r_finger_joint]
+  - name: r_gripper_controller
+    action_ns: gripper_action
+    default: true
+    joints:
+      - r_gripper_joint
+      - r_gripper_l_finger_joint
+      - r_gripper_r_finger_joint
+      - r_gripper_l_finger_tip_joint
+      - r_gripper_r_finger_tip_joint
+      - r_gripper_motor_screw_joint
+      - r_gripper_motor_slider_joint
