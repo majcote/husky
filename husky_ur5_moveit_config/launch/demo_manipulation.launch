@@ -11,4 +11,6 @@
      <arg name="config" value="true"/>
  </include>
 
+ <node name="ur5_arm_pick_and_place" type="pick_place_tutorial" pkg="husky_tutorials"/>
+
 </launch>

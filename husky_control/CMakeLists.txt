@@ -12,3 +12,4 @@ catkin_install_python(PROGRAMS scripts/stow_ur5 DESTINATION ${CATKIN_PACKAGE_BIN
 install(DIRECTORY config launch scripts
   DESTINATION ${CATKIN_PACKAGE_SHARE_DESTINATION}
 )
+
